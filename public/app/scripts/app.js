@@ -1,0 +1,5 @@
+/*
+
+This file sets up routes and the angular module
+
+*/
