@@ -20,3 +20,6 @@ TODO Backlog
 * Payment solution (Paypal)
 * E-mail notifications of bid/enquiry status
 * Make it itty-pjetty.
+
+## Resources
+* http://www.programmableweb.com/search/cars
