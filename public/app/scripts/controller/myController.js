@@ -1,3 +1,0 @@
-/*
-Controllers go in seperate files in this folder
-*/

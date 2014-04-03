@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html ng-app="carApp" lang="en">
+<head >
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../lib/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../lib/css/foundation.min.css">
@@ -9,10 +9,16 @@
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 
 </head>
-<body>
+<body ng-controller="mainController">
+
+	<div ng-view>
+		
+	</div>
 
 	<script type="text/javascript" src="../lib/js/modernizr.js"></script>
 	<script type="text/javascript" src="../lib/js/angular.min.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controller/mainController.js"></script>
 	<script type="text/javascript" src="../lib/js/angular-route.min.js"></script>
 </body>
 </html>
