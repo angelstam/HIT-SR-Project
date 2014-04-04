@@ -3,34 +3,29 @@
 		<p>Someone has bid on your enquiry!</p>
 		<p>Click <a href="enquiry.html">here</a> to view the bid.</p>
 	</div>
-	<div class="large-2 columns">
-		<form>
-			<div class="form-group">
-				<label>Brand</label>
-				<input type="text" class="form-control" name="brand">
-			</div>
-			<div class="form-group">
-				<label>Model</label>
-				<input type="text" class="form-control" name="model">
-			</div>
-			<div class="form-group">
-				<label>Colour</label>
-				<select>
-					<option>Black</option>
-					<option>Blue</option>
-					<option>Silver</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label>Age</label>
-				<input type="text" class="form-control" name="age">
-			</div>
-			<div class="form-group">
-				<label>Milage</label>
-				<input type="text" class="form-control" name="milage">
-			</div>
-		</form>
-	</div>
+
+					
+		<div class="large-3 columns">
+			<label>Brand</label>
+			<input type="text" name="brand" ng-model="search.Brand">
+					
+			<label>Model</label>
+			<input type="text" name="model" ng-model="search.Model">
+		
+			<label>Colour</label>
+			<select  ng-model="search.Colour">
+				<option>Black</option>
+				<option>Blue</option>
+				<option>Silver</option>
+			</select>
+		
+			<label>Age</label>
+			<input type="text" name="age" ng-model="search.Age">
+		
+			<label>Milage</label>
+			<input type="text" name="milage" ng-model="search.Milage">
+
+		</div>
 	<div class="large-10 columns">
 		<table>
 		
@@ -47,7 +42,7 @@
 				</tr>	
 			</thead>
 			<tbody>
-				<tr ng-repeat="enquiry in enquiries">
+				<tr ng-repeat="enquiry in enquiries | filter: search">
 					<td>{{enquiry.Brand}}</td>
 					<td>{{enquiry.Model}}</td>
 					<td>{{enquiry.Colour}}</td>
