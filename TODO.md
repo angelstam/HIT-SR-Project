@@ -2,6 +2,13 @@ TODO Backlog
 =========
 
 ## Complete
+* REST backend with the following routes:
+  - enquiries
+  - bids
+  - login
+  - acceptBid (no POST)
+  - signUp
+  - cars
 
 ## Top priority
 * Login page
@@ -9,6 +16,7 @@ TODO Backlog
 * Main page (Profile page)
 * Database
 * REST backend
+  - acceptBid (POST)
 * Create/config enquiries (Fixed options: brand, model, color, milage, age)
 * Bid on enquiries
 
