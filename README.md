@@ -27,24 +27,36 @@ Returns a list of all enquiries.
 
 `POST /enquiries`
 Create a new enquiry, return ok or error.
+ - car_id: int (required)
+ - target_price: int
+ - color: string
+ - milage: int
+ - from_year: int
 
 `GET /login`
 Return status of login.
 
 `POST /login`
 Process the login, return ok or error.
+ - username: string (required)
+ - password: string (required)
 
 `POST /signUp`
 Sign-up a new user, return ok or error.
+ - username: string (required)
+ - password: string (required)
 
 `GET /bids`
 Return list of bids.
 
 `POST /bids`
 Place bid.
+ - on_enquiry_id: int (required)
 
 `POST /acceptBid`
 Accept a bid.
+ - enquiry_id: int (required)
+ - accepted_bid_id: int (required)
 
 `GET /cars`
 Return list of cars.
