@@ -7,6 +7,7 @@ $db_name = 'reversecarbay';
 
 require("../include/RestService-class.inc");
 require("../include/RestRouteLogin-class.inc");
+require("../include/RestRouteLogout-class.inc");
 require("../include/RestRouteSignUp-class.inc");
 require("../include/RestRouteEnquiries-class.inc");
 require("../include/RestRouteBids-class.inc");
@@ -28,6 +29,7 @@ catch(PDOException $e)
 
 $rest = new RestService();
 $rest->addRoute("login", new RestRouteLogin());
+$rest->addRoute("logout", new RestRouteLogout());
 $rest->addRoute("signUp", new RestRouteSignUp());
 $rest->addRoute("enquiries", new RestRouteEnquiries());
 $rest->addRoute("bids", new RestRouteBids());

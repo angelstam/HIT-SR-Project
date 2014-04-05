@@ -71,7 +71,8 @@ CREATE TABLE IF NOT EXISTS `reversecarbay`.`bids` (
   `bid_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `user_id` INT UNSIGNED NOT NULL,
   `on_enquiry_id` INT UNSIGNED NOT NULL,
-  `enquiry_configuration` TEXT NULL,
+  `bid_amount` DOUBLE UNSIGNED NOT NULL,
+  `bid_timestamp` TIMESTAMP NOT NULL,
   PRIMARY KEY (`bid_id`, `user_id`, `on_enquiry_id`),
   INDEX `fk_bids_user_idx` (`user_id` ASC),
   INDEX `fk_bids_enquiry_idx` (`on_enquiry_id` ASC),
@@ -97,8 +98,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `reversecarbay`;
-INSERT INTO `reversecarbay`.`users` (`user_id`, `username`, `password`) VALUES (1, 'test', NULL);
-INSERT INTO `reversecarbay`.`users` (`user_id`, `username`, `password`) VALUES (2, 'admin', NULL);
+INSERT INTO `reversecarbay`.`users` (`user_id`, `username`, `password`) VALUES (1, 'test', 'test');
+INSERT INTO `reversecarbay`.`users` (`user_id`, `username`, `password`) VALUES (2, 'admin', 'admin');
 
 COMMIT;
 

@@ -16,42 +16,69 @@ class RestRouteAcceptBid extends RestRoute
 		return false;
 	}
 
-	/*function put($p, $data)
+	function put($p, $data)
 	{
 		if (count($p) == 0)
 		{
-			return $this->placeBid($data);
+			return $this->acceptBid($data);
 		}
 		return false;
-	}*/
+	}
 
 	private function getBids()
 	{
 		global $db;
 
-		$result = $db->query("
-			SELECT
-				*
-			FROM
-				bids
-			");
+		$auth = new SimpleAuth();
 
-		return $result->fetchAll(PDO::FETCH_ASSOC);
+		if ($auth->loginCheck())
+		{
+			$result = $db->prepare("
+				SELECT
+					bids.*
+				FROM
+					bids
+					LEFT JOIN enquiries ON bids.on_enquiry_id=enquiries.enquiry_id
+				WHERE
+					enquiries.user_id = :user_id
+				");
+			$result->bindParam(':user_id', $auth->getUserID(), PDO::PARAM_INT);
+			$result->execute();
+
+			return $result->fetchAll(PDO::FETCH_ASSOC);
+		}
+		
+		return false;
 	}
 
-	/*private function placeBid($data)
+	private function acceptBid($data)
 	{
 		global $db;
 
-		$result = $db->query("
-			INSERT
-				stuff
-			INTO
-				table
-			");
+		$auth = new SimpleAuth();
 
-		return $result->fetchAll(PDO::FETCH_ASSOC);
-	}*/
+		if ($auth->loginCheck())
+		{
+			$result = $db->prepare("
+				UPDATE
+					enquiries
+				SET
+					accepted_bid_id = :accepted_bid_id
+				WHERE
+					user_id = :user_id
+					AND enquiry_id = :enquiry_id
+					AND ISNULL(accepted_bid_id)
+				");
+			$result->bindParam(':user_id', $auth->getUserID(), PDO::PARAM_INT);
+			$result->bindParam(':enquiry_id', $data->enquiry_id, PDO::PARAM_INT);
+			$result->bindParam(':accepted_bid_id', $data->accepted_bid_id, PDO::PARAM_INT);
+			$result->execute();
+
+			return $result->rowCount() > 0;
+		}
+		
+		return false;
+	}
 }
 
 ?>

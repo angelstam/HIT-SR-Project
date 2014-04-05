@@ -41,17 +41,23 @@ Process the login, return ok or error.
  - username: string (required)
  - password: string (required)
 
+`POST /logout`
+Do logout.
+
 `POST /signUp`
 Sign-up a new user, return ok or error.
  - username: string (required)
  - password: string (required)
 
 `GET /bids`
-Return list of bids.
+Return a list of bids.
 
 `POST /bids`
 Place bid.
  - on_enquiry_id: int (required)
+
+`GET /acceptBid`
+Return a list of bids the current user can accept.
 
 `POST /acceptBid`
 Accept a bid.

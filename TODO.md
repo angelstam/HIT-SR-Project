@@ -6,7 +6,8 @@ TODO Backlog
   - enquiries
   - bids
   - login
-  - acceptBid (no POST)
+  - logout
+  - acceptBid
   - signUp
   - cars
 
@@ -15,9 +16,7 @@ TODO Backlog
 * Registration page
 * Main page (Profile page)
 * Database
-* REST backend
-  - acceptBid (POST)
-* Create/config enquiries (Fixed options: brand, model, color, milage, age)
+* Create/config enquiries (Fixed options: brand, model, color, milage, from_year)
 * Bid on enquiries
 
 ## Later
