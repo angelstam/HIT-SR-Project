@@ -31,3 +31,8 @@ TODO Backlog
 
 ## Resources
 * http://www.programmableweb.com/search/cars
+
+### Authentication and REST and Angular and JSON Web Token (JWT)
+* https://github.com/auth0/auth0-angular
+* http://blog.auth0.com/2014/01/07/angularjs-authentication-with-cookies-vs-token/
+* http://arthur.gonigberg.com/2013/06/29/angularjs-role-based-auth/
