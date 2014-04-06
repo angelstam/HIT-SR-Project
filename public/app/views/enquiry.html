@@ -1,15 +1,16 @@
 <div class="large-3 columns">
+	<h2>Add new enquiry</h2>
 	<form>
 		<div class="form-group">
 			<label>Brand</label>
-			<select ng-model='selectedPerson'>
+			<select ng-model='selectedBrand'>
 			<option ng-repeat="(key, value) in carBrands">{{key}}</option>
 			</select> 
 		</div>
 		<div class="form-group">
 			<label>Model</label>
 			<select ng-model='form.car_id'>
-			<option ng-repeat='(key, value) in carBrands[selectedPerson]' value='{{value}}'>{{key}}</option>
+			<option ng-repeat='(key, value) in carBrands[selectedBrand]' value='{{value}}'>{{key}}</option>
 		</select>
 		</div>
 		<div class="form-group">
@@ -37,6 +38,7 @@
 </div>
 
 <div class="large-7 columns">
+	<h2>Your enquires</h2>
 	<table>
 	
 		<thead>
@@ -50,62 +52,19 @@
 				<td>Remove</td>
 			</tr>	
 		</thead>
-		<tbody>
+		<tbody ng-repeat="enquiry in enquiries">
 			<tr>
-				<td>Ford</td>
-				<td>Mondeo</td>
-				<td>Black</td>
-				<td>2 Years Old</td>
-				<td>25000</td>
-				<td>$5000</td>
+				<td>{{enquiry.brand_name}}</td>
+				<td>{{enquiry.model_name}}</td>
+				<td>{{enquiry.color}}</td>
+				<td>{{enquiry.age}}</td>
+				<td>{{enquiry.milage}}</td>
+				<td>{{enquiry.target_price}}</td>
 				<td><a href="view-bids.html">New!</a></td>
 				<td><a href="view-bids.html">$6000</a></td>
 				<td><input type="checkbox"></td>
 			</tr>	
-			<tr>
-				<td>Ford</td>
-				<td>Mondeo</td>
-				<td>Black</td>
-				<td>2 Years Old</td>
-				<td>25000</td>
-				<td>$5000</td>
-				<td><a href="view-bids.html">New!</a></td>
-				<td><a href="view-bids.html">$6000</a></td>
-				<td><input type="checkbox"></td>
-			</tr>	
-			<tr>
-				<td>Ford</td>
-				<td>Mondeo</td>
-				<td>Black</td>
-				<td>2 Years Old</td>
-				<td>25000</td>
-				<td>$5000</td>
-				<td><a href="view-bids.html">New!</a></td>
-				<td><a href="view-bids.html">$6000</a></td>
-				<td><input type="checkbox"></td>
-			</tr>	
-			<tr>
-				<td>Ford</td>
-				<td>Mondeo</td>
-				<td>Black</td>
-				<td>2 Years Old</td>
-				<td>25000</td>
-				<td>$5000</td>
-				<td><a href="view-bids.html">New!</a></td>
-				<td><a href="view-bids.html">$6000</a></td>
-				<td><input type="checkbox"></td>
-			</tr>	
-			<tr>
-				<td>Ford</td>
-				<td>Mondeo</td>
-				<td>Black</td>
-				<td>2 Years Old</td>
-				<td>25000</td>
-				<td>$5000</td>
-				<td><a href="view-bids.html">New!</a></td>
-				<td><a href="view-bids.html">$6000</a></td>
-				<td><input type="checkbox"></td>
-			</tr>	
+	
 		</tbody>
 	</table>
 </div>	
