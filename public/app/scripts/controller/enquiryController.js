@@ -1,5 +1,15 @@
-carApp.controller('EnquiryCtrl', function($scope) {
+carApp.controller('EnquiryCtrl', function($scope,$http) {
 
-	// create a message to display in our view
-	$scope.message = 'Everyone come and see how good I look!';
+	//Add enquiry to database
+	$scope.addEnquiry=function(formData){
+		$http({method: 'POST', url: 'http://reversecarbay.local/json/enquiries', data: formData}).
+		success(function (data, status, headers, config) {
+			console.log("Success!");
+
+		}).
+		error(function (data, status, headers, config) {
+			alert("The enquiry failed");
+		});
+	}
+	
 });

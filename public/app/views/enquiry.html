@@ -2,7 +2,10 @@
 	<form>
 		<div class="form-group">
 			<label>Brand</label>
-			<input type="text" class="form-control" name="brand">
+			<select ng-model="form.car_id">
+				<option value="1">Volvo</option>
+				<option value="2">Audi</option>
+			</select>
 		</div>
 		<div class="form-group">
 			<label>Model</label>
@@ -10,7 +13,7 @@
 		</div>
 		<div class="form-group">
 			<label>Colour</label>
-			<select>
+			<select ng-model="form.color">
 				<option>Black</option>
 				<option>Blue</option>
 				<option>Silver</option>
@@ -18,17 +21,21 @@
 		</div>
 		<div class="form-group">
 			<label>Age</label>
-			<input type="text" class="form-control" name="age">
+			<input ng-model="form.from_year" type="text" class="form-control" name="age">
 		</div>
 		<div class="form-group">
 			<label>Milage</label>
-			<input type="text" class="form-control" name="milage">
+			<input ng-model="form.milage" type="text" class="form-control" name="milage">
 		</div>
 		<div class="form-group">
-			<label>Milage</label>
-			<input type="text" class="form-control" name="milage">
+			<label>User</label>
+			<input ng-init="form.user_id = 1" ng-model="form.user_id" type="text" class="form-control" name="user_id">
 		</div>
-		<button type="submit" class="">Add Enquiry</button>
+		<div class="form-group">
+			<label>Asking price</label>
+			<input ng-model="form.target_price" type="text" class="form-control" name="target_price">
+		</div>
+		<button ng-click="addEnquiry(form)" type="submit" class="">Add Enquiry</button>
 	</form>
 </div>
 <div class="large-7 columns">

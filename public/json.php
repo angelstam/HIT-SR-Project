@@ -1,9 +1,12 @@
 <?php
 
-$user = 'reversecarbay';
-$pass = 'secret';
-$host = '127.0.0.1';
-$db_name = 'reversecarbay';
+if (!@include("../config.local.inc"))
+{
+	$user = 'reversecarbay';
+	$pass = 'secret';
+	$host = '127.0.0.1';
+	$db_name = 'reversecarbay';
+}
 
 require("../include/RestService-class.inc");
 require("../include/RestRouteLogin-class.inc");
