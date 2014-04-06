@@ -16,6 +16,7 @@ TODO Backlog
 * Remain logged in when refreshing page
 * Registration page
 * Main page (Profile page)
+  - Remove my enquiries from the list
 * Database
 * Create/config enquiries (Fixed options: brand, model, color, milage, from_year)
 * Bid on enquiries

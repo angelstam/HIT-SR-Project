@@ -43,14 +43,14 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="enquiry in enquiries | filter: search">
-					<td>{{enquiry.Brand}}</td>
-					<td>{{enquiry.Model}}</td>
-					<td>{{enquiry.Colour}}</td>
-					<td>{{enquiry.Age}} Years Old</td>
-					<td>{{enquiry.Milage}}</td>
-					<td>{{enquiry.AskingPrice}}</td>
-					<td><input type="text" class="form-control" name="milage"></td>
-					<td><button type="submit" class="">Place Bid</button></td>
+					<td>{{enquiry.brand_name}}</td>
+					<td>{{enquiry.model_name}}</td>
+					<td>{{enquiry.color}}</td>
+					<td>{{getAgeFromYear(enquiry.from_year)}} Years Old</td>
+					<td>{{enquiry.milage}}</td>
+					<td>{{enquiry.target_price}}</td>
+					<td><input type="text" class="form-control" ng-model="from.bid_amount"></td>
+					<td><input type="hidden" ng-model="from.on_enquiry_id" value="{{enquiry.enquiry_id}}"><button class="" ng-click="placeBid(form)">Place Bid</button></td>
 				</tr>		
 			</tbody>
 		</table>
