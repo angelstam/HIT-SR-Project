@@ -35,6 +35,7 @@ class RestRouteEnquiries extends RestRoute
 				*
 			FROM
 				enquiries
+				LEFT JOIN cars ON enquiries.car_id = cars.car_id
 			");
 
 		return $result->fetchAll(PDO::FETCH_ASSOC);

@@ -61,11 +61,11 @@ class RestRouteBids extends RestRoute
 				SET
 					user_id = :user_id,
 					on_enquiry_id = :on_enquiry_id,
-					enquiry_configuration = :enquiry_configuration
+					bid_amount = :bid_amount
 				");
 			$result->bindParam(':user_id', $auth->getUserID(), PDO::PARAM_INT);
 			$result->bindParam(':on_enquiry_id', $data->on_enquiry_id, PDO::PARAM_INT);
-			$result->bindParam(':enquiry_configuration', $data->enquiry_configuration, PDO::PARAM_STR);
+			$result->bindParam(':bid_amount', $data->bid_amount, PDO::PARAM_INT);
 			$result->execute();
 
 			return Array("bid_id"=>$db->lastInsertId());
