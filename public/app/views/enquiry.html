@@ -2,14 +2,15 @@
 	<form>
 		<div class="form-group">
 			<label>Brand</label>
-			<select ng-model="form.car_id">
-				<option value="1">Volvo</option>
-				<option value="2">Audi</option>
-			</select>
+			<select ng-model='selectedPerson'>
+			<option ng-repeat="(key, value) in carBrands">{{key}}</option>
+			</select> 
 		</div>
 		<div class="form-group">
 			<label>Model</label>
-			<input type="text" class="form-control" name="model">
+			<select ng-model='form.car_id'>
+			<option ng-repeat='(key, value) in carBrands[selectedPerson]' value='{{value}}'>{{key}}</option>
+		</select>
 		</div>
 		<div class="form-group">
 			<label>Colour</label>
@@ -28,16 +29,13 @@
 			<input ng-model="form.milage" type="text" class="form-control" name="milage">
 		</div>
 		<div class="form-group">
-			<label>User</label>
-			<input ng-init="form.user_id = 1" ng-model="form.user_id" type="text" class="form-control" name="user_id">
-		</div>
-		<div class="form-group">
 			<label>Asking price</label>
 			<input ng-model="form.target_price" type="text" class="form-control" name="target_price">
 		</div>
 		<button ng-click="addEnquiry(form)" type="submit" class="">Add Enquiry</button>
 	</form>
 </div>
+
 <div class="large-7 columns">
 	<table>
 	
