@@ -1,5 +1,8 @@
 <?php
 
+// Local configuration of database connection.
+// Copy to config.local.inc to use.
+
 $user = 'root';
 $pass = '';
 $host = '127.0.0.1';
