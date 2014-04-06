@@ -63,7 +63,7 @@ class SimpleAuth
 
 			if ($userinfo->password == $password)
 			{
-				session_register("user_id");
+	//			session_register("user_id");
 				$_SESSION['user_id'] = $userinfo->user_id;
 
 				return Array("user_id"=>$userinfo->user_id, "username"=>$userinfo->username);

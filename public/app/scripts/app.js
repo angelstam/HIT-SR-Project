@@ -1,9 +1,3 @@
-/*
-
-This file sets up routes and the angular module
-
-*/
-
 var carApp = angular.module('carApp', ['ngRoute']);
 
 carApp.config(function($routeProvider) {

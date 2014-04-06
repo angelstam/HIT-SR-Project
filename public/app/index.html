@@ -1,45 +1,55 @@
 <!DOCTYPE html>
-<html ng-app="carApp" lang="en">
+<html  lang="en">
 <head >
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../lib/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="../lib/css/foundation.min.css">
-	<link rel="stylesheet" type="text/css" href="/styles/app.css">
+	<link rel="stylesheet" type="text/css" href="./styles/app.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+	<style type="text/css">
+		.hidden{
+			visibility: hidden;
+
+		}
+	</style>
 
 </head>
-<body>
-
-	<nav class="top-bar">
-	    <section class="top-bar-section">
-			<ul class="left">
-				<li class="divider"></li>
-				<li><a href="#/home">Reverse Car Bay</a></li>
-				<li class="divider"></li>
-		        <li><a href="#/enquiry">My Enquirys</a></li>
-		        <li class="divider"></li>
-		     	<li><a href="">My Cars</a></li>
-		     	<li class="divider"></li>
-		     	<li><a href="">Edit Details</a></li>
-		     	<li class="divider"></li>
-		     	<li><a href="#/login">Log Out</a></li>
-		     	<li class="divider"></li>
-		    </ul>
-	    </section>
-	</nav>
-
-	<div ng-view>
-		
+<body ng-app="carApp">
+	<div ng-controller="NavCtrl">
+	{{user.username}}
+		<nav class="top-bar">
+		    <section class="top-bar-section">
+				<ul class="left">
+					<li class="divider"></li>
+					<li><a href="#/home">Reverse Car Bay</a></li>
+					<li class="divider"></li>
+					<li><a href="#/enquiry" class = "{{user.isLogged ? '' : 'hidden'}}">My Enquirys</a></li>
+		        	<li class="divider"></li>
+			        
+			     	<!--<li><a href="">My Cars</a></li>
+			     	<li class="divider"></li>
+			     	<li><a href="">Edit Details</a></li>
+			     	<li class="divider"></li>-->
+			     	<li><a href="#/{{user.isLogged ? 'logout' : 'login'}}">{{user.isLogged ? "Log Out" :"Log In"}}</a></li>
+			     	<li class="divider"></li>
+			    </ul>
+		    </section>
+		</nav>
 	</div>
+	<div ng-view=""></div>
+</div>
 
 	<script type="text/javascript" src="../lib/js/modernizr.js"></script>
-	<script type="text/javascript" src="../lib/js/angular.min.js"></script>
+	<script type="text/javascript" src="../lib/js/angular.js"></script>
 	<script type="text/javascript" src="../lib/js/angular-route.min.js"></script>
 	<script src="scripts/app.js"></script>
+	<script src="scripts/services.js"></script>
 	<script src="scripts/controller/mainController.js"></script>
 	<script src="scripts/controller/homeController.js"></script>
-		<script src="scripts/controller/enquiryController.js"></script>
+	<script src="scripts/controller/enquiryController.js"></script>
+	<script src="scripts/controller/navController.js"></script>
+	<script src="scripts/controller/loginController.js"></script>
 
 </body>
 </html>
