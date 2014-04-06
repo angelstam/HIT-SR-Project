@@ -13,6 +13,7 @@ TODO Backlog
 
 ## Top priority
 * Login page
+* Remain logged in when refreshing page
 * Registration page
 * Main page (Profile page)
 * Database

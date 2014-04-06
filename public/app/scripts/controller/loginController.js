@@ -46,9 +46,9 @@ carApp.controller('LoginCtrl', function($scope, $http, $location, UserService){
 				console.log(data);
 			console.log($scope.formData);
 			if(data.username) {
-				
 				UserService.isLogged = true;
 				UserService.username = data.username;
+				UserService.id = data.user_id;
 				$location.url('/home');
 
 			} else {

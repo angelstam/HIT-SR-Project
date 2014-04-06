@@ -2,8 +2,8 @@
 
 carApp.factory('UserService', function() {
 	return data = {
-		username : 'blah blah',
-		password : 'test',
+		username : '',
+		password : '',
 		isLogged: false,
 		id : ''
 	};
