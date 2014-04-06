@@ -30,6 +30,7 @@ TODO Backlog
 
 ## Resources
 * http://www.programmableweb.com/search/cars
+* https://github.com/mgonto/restangular
 
 ### Authentication and REST and Angular and JSON Web Token (JWT)
 * https://github.com/auth0/auth0-angular
