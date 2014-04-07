@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html lang="en">
 <head >
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="../lib/css/normalize.css">
@@ -18,22 +18,22 @@
 <body ng-app="carApp">
 	<div ng-controller="NavCtrl">
 		<nav class="top-bar">
-		    <section class="top-bar-section">
+			<section class="top-bar-section">
 				<ul class="left">
 					<li class="divider"></li>
 					<li><a href="#/home">Reverse Car Bay</a></li>
 					<li class="divider"></li>
-					<li><a href="#/enquiry" class = "{{user.isLogged ? '' : 'hidden'}}">My Enquirys</a></li>
-		        	<li class="divider"></li>
-			        
-			     	<!--<li><a href="">My Cars</a></li>
-			     	<li class="divider"></li>
-			     	<li><a href="">Edit Details</a></li>
-			     	<li class="divider"></li>-->
-			     	<li><a href="#/{{user.isLogged ? 'logout' : 'login'}}">{{user.isLogged ? "Log Out" :"Log In"}}</a></li>
-			     	<li class="divider"></li>
-			    </ul>
-		    </section>
+					<li ng-show="user.isLogged"><a href="#/enquiry">My Enquiries</a></li>
+					<li ng-show="user.isLogged" class="divider"></li>
+				</ul>
+				<ul class="right">
+					<li class="divider"></li>
+					<li>
+						<a ng-show="user.isLogged" ng-click="doLogout()">Log Out</a>
+						<a ng-hide="user.isLogged" href="#/login">Log In</a></li>
+					<li class="divider"></li>
+				</ul>
+			</section>
 		</nav>
 	</div>
 	<div ng-view=""></div>

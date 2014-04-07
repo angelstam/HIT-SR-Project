@@ -26,3 +26,37 @@ carApp.config(function($routeProvider) {
 			redirectTo:'/home'
 	});
 });
+carApp.run(function($rootScope, $http, UserService) {
+	$rootScope.checkLoginStatus = function() {
+		$http.get('/json/login')
+			.success(function(data) {
+			if(data.username) {
+				UserService.isLogged = true;
+				UserService.username = data.username;
+				UserService.id = data.user_id;
+			} else {
+				UserService.isLogged = false;
+				UserService.username = '';
+			}
+		})
+			.error(function(data) {
+			UserService.isLogged = false;
+			UserService.username = '';
+		});
+	};
+	$rootScope.checkLoginStatus();
+
+	$rootScope.doLogout = function() {
+		$http.post('/json/logout')
+			.success(function(data) {
+			UserService.isLogged = false;
+			UserService.username = '';
+			UserService.id = '';
+		})
+			.error(function(data) {
+			UserService.isLogged = false;
+			UserService.username = '';
+			UserService.id = '';
+		});
+	};
+});

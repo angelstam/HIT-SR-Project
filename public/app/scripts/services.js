@@ -1,4 +1,3 @@
-//add userid as userservice.id
 
 carApp.factory('UserService', function() {
 	return data = {
