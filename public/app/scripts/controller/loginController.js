@@ -37,10 +37,9 @@ carApp.controller('LoginCtrl', function($scope, UserService) {
 //});
 
 carApp.controller('LoginCtrl', function($scope, $http, $location, UserService){
-	$scope.formData= UserService;
+	$scope.formData = UserService;
 
-	$scope.poop =function(formData) {
-
+	$scope.doLogin = function(formData) {
 		$http.post('/json/login',formData)
 			.success(function(data) {
 				console.log(data);
@@ -50,7 +49,6 @@ carApp.controller('LoginCtrl', function($scope, $http, $location, UserService){
 				UserService.username = data.username;
 				UserService.id = data.user_id;
 				$location.url('/home');
-
 			} else {
 				console.log(data);
 				UserService.isLogged = false;
@@ -63,4 +61,24 @@ carApp.controller('LoginCtrl', function($scope, $http, $location, UserService){
 			UserService.username = '';
 		});
 	};
+	
+	$scope.checkLogin = function() {
+		$http.get('/json/login')
+			.success(function(data) {
+			if(data.username) {
+				UserService.isLogged = true;
+				UserService.username = data.username;
+				UserService.id = data.user_id;
+				$location.url('/home');
+			} else {
+				UserService.isLogged = false;
+				UserService.username = '';
+			}
+		})
+			.error(function(data) {
+			UserService.isLogged = false;
+			UserService.username = '';
+		});
+	};
+	$scope.checkLogin();
 });

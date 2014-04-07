@@ -10,6 +10,7 @@
 class SimpleAuth
 {
 	private $user_id = 0;
+	private $userinfo = Array();
 	private $loginok = false;
 	private $error = false;
 	
@@ -29,6 +30,7 @@ class SimpleAuth
 		elseif (isset($_SESSION['user_id']) && $_SESSION['user_id'] > 0)
 		{
 			$this->user_id = $_SESSION['user_id'];
+			$this->userinfo = $_SESSION['userinfo'];
 			$this->loginok = true;
 			return true;
 		}
@@ -40,6 +42,11 @@ class SimpleAuth
 	function getUserID()
 	{
 		return $this->user_id;
+	}
+
+	function getUserInfo()
+	{
+		return $this->userinfo;
 	}
 
 	function login($username, $password)
@@ -63,10 +70,10 @@ class SimpleAuth
 
 			if ($userinfo->password == $password)
 			{
-	//			session_register("user_id");
 				$_SESSION['user_id'] = $userinfo->user_id;
+				$_SESSION['userinfo'] = Array("user_id"=>$userinfo->user_id, "username"=>$userinfo->username);
 
-				return Array("user_id"=>$userinfo->user_id, "username"=>$userinfo->username);
+				return $_SESSION['userinfo'];
 			}
 		}
 
@@ -76,7 +83,8 @@ class SimpleAuth
 	function logout()
 	{
 		$_SESSION['user_id'] = 0;
-		session_unregister('user_id');
+		unset($_SESSION['user_id']);
+		unset($_SESSION['userinfo']);
 		$this->user_id = 0;
 	}
 }

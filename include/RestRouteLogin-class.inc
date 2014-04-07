@@ -30,7 +30,7 @@ class RestRouteLogin extends RestRoute
 	{
 		$auth = new SimpleAuth();
 		
-		return $auth->loginCheck();
+		return $auth->getUserInfo();
 	}
 
 	private function doLogin($data)
