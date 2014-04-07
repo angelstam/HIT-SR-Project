@@ -55,6 +55,7 @@ Return a list of bids.
 `POST /bids`
 Place bid.
  - on_enquiry_id: int (required)
+ - bid_amount: double (required)
 
 `GET /acceptBid`
 Return a list of bids the current user can accept.
