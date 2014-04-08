@@ -123,7 +123,7 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 
 	$scope.acceptBid = function(bidForm) {
 
-		//console.log("eng "+bidForm.enquiry_id+" user "+bidForm.user_id+" bid "+bidForm.accepted_bid_id);
+		console.log("eng "+bidForm.enquiry_id+" user "+bidForm.user_id+" bid "+bidForm.accepted_bid_id);
 
 		$http({method: 'POST', url: 'http://reversecarbay.local/json/acceptBid', data: bidForm}).
 		success(function (data, status, headers, config) {
