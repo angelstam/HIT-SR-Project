@@ -54,8 +54,8 @@
 				<td></td>
 			</tr>	
 		</thead>
-		<tbody ng-repeat="enquiry in enquiries | filter:{user_id:getUserID()}">
-			<tr>
+		<tbody>
+			<tr ng-repeat-start="enquiry in enquiries | filter:{user_id:getUserID()}">
 				<td>{{enquiry.brand_name}}</td>
 				<td>{{enquiry.model_name}}</td>
 				<td>{{enquiry.color}}</td>
@@ -81,7 +81,10 @@
 					<input type="hidden" ng-model="bidForm.accepted_bid_id" ng-init="bidForm.accepted_bid_id = bid.bid_id" />
 					<button type="submit" class="" ng-click="acceptBid(bidForm)">Accept bid</button></form>
 				</td>
-			</tr>	
+			</tr>
+			<tr ng-repeat-end>
+      			<td></td>
+ 			</tr>
 	
 		</tbody>
 	</table>
