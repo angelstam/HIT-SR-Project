@@ -50,9 +50,10 @@
 				<td>Milage</td>
 				<td>Asking Price</td>
 				<td>Remove</td>
+				<td></td>
 			</tr>	
 		</thead>
-		<tbody ng-repeat="enquiry in enquiries">
+		<tbody ng-repeat="enquiry in enquiries | filter:{user_id:getUserID()}">
 			<tr>
 				<td>{{enquiry.brand_name}}</td>
 				<td>{{enquiry.model_name}}</td>
@@ -60,9 +61,17 @@
 				<td>{{enquiry.age}}</td>
 				<td>{{enquiry.milage}}</td>
 				<td>{{enquiry.target_price}}</td>
-				<td><a href="view-bids.html">New!</a></td>
-				<td><a href="view-bids.html">$6000</a></td>
+				<!--<td><a href="view-bids.html">New!</a></td>
+				<td><a href="view-bids.html">$6000</a></td> -->
 				<td><input type="checkbox"></td>
+				<td><input type="hidden" ng-model="from.on_enquiry_id"><button class="" ng-click="getBids(enquiry.enquiry_id)">View Bids</button></td>
+			</tr>
+			<tr ng-show='enquiry.enquiry_id == selectedEnquiry' ng-repeat="bid in bids | filter:{on_enquiry_id:enquiry.enquiry_id}">
+				<td></td>
+				<td><em>Bid amount: {{bid.bid_amount}}</em></td>
+				<td><em>Location: Nowhere</em></td>
+				<td>{{sale.StocksSold}}</td>
+				<td>{{sale.BarrelsSold}}</td>
 			</tr>	
 	
 		</tbody>
