@@ -1,6 +1,7 @@
 carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 
-		$scope.userID = UserService.id;
+	$scope.userID = UserService.id;
+	$scope.bidForm = {};
 
 	// Get the user id from UserService
 	$scope.getUserID = function(){
@@ -55,18 +56,7 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 
 	};
 
-	// Call functions to be run at pageload
-	$scope.getCars();
-	$scope.getEnquiries();
-
-	$scope.getBids = function(enquiryID) {
-
-		if(enquiryID == $scope.selectedEnquiry) {
-			//If user presses button again the field should be hidden
-			$scope.selectedEnquiry = 0;
-		} else {
-		$scope.selectedEnquiry = enquiryID;
-		}
+	$scope.getBids = function() {
 
 		$http({method: 'GET', url: 'http://reversecarbay.local/json/bids'}).
 			success(function (data, status, headers, config) {
@@ -78,11 +68,65 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 		});
 	}
 
+	// Call functions to be run at pageload
+	$scope.getCars();
+	$scope.getEnquiries();
+	$scope.getBids();
+
 	//Add enquiry to database
 	$scope.addEnquiry=function(formData){
+
 		$http({method: 'POST', url: 'http://reversecarbay.local/json/enquiries', data: formData}).
 		success(function (data, status, headers, config) {
-			console.log("Success!");
+
+		// Update enquiries on page
+		$scope.getEnquiries();
+
+		}).
+		error(function (data, status, headers, config) {
+			alert("The enquiry failed");
+		}); 
+
+	}
+
+	$scope.showBidsForEnquiry = function(enquiryID) {
+
+		if(enquiryID == $scope.selectedEnquiry) {
+			//If user presses button again the field should be hidden
+			$scope.selectedEnquiry = 0;
+		} else {
+		$scope.selectedEnquiry = enquiryID;
+		}
+
+	}
+
+	$scope.numberOfBids = function(enquiryID) {
+		
+		var total = 0;
+
+		$scope.bids.forEach(function(entry) {
+				
+				if(entry.on_enquiry_id == enquiryID) {
+
+					total +=1;
+				} 
+			
+			});
+
+		if(total == 0) {
+			return "No bids yet";
+		} else {
+		return total;
+		}	
+
+	}
+
+	$scope.acceptBid = function(bidForm) {
+
+		//console.log("eng "+bidForm.enquiry_id+" user "+bidForm.user_id+" bid "+bidForm.accepted_bid_id);
+
+		$http({method: 'POST', url: 'http://reversecarbay.local/json/acceptBid', data: bidForm}).
+		success(function (data, status, headers, config) {
 
 		// Update enquiries on page
 		$scope.getEnquiries();
@@ -92,9 +136,11 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 			alert("The enquiry failed");
 		});
 
-	}
 
-			$scope.selectedEnquiry = 0;
+	}
+	
+	//Variable for keeping track of which view bid button was pressed
+	$scope.selectedEnquiry = 0;
 	
 });
 

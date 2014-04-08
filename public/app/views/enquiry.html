@@ -49,7 +49,8 @@
 				<td>Age</td>
 				<td>Milage</td>
 				<td>Asking Price</td>
-				<td>Remove</td>
+				<!--<td>Remove</td> -->
+				<td>Number of bids</td>
 				<td></td>
 			</tr>	
 		</thead>
@@ -63,15 +64,23 @@
 				<td>{{enquiry.target_price}}</td>
 				<!--<td><a href="view-bids.html">New!</a></td>
 				<td><a href="view-bids.html">$6000</a></td> -->
-				<td><input type="checkbox"></td>
-				<td><input type="hidden" ng-model="from.on_enquiry_id"><button class="" ng-click="getBids(enquiry.enquiry_id)">View Bids</button></td>
+				<!--<td><input type="checkbox"></td> -->
+				<td>{{numberOfBids(enquiry.enquiry_id)}}</td>
+				<td><input type="hidden" ng-model="from.on_enquiry_id">
+				<button ng-hide="enquiry.accepted_bid_id" class="" ng-click="showBidsForEnquiry(enquiry.enquiry_id)">View Bids</button>
+				<label ng-show="enquiry.accepted_bid_id" style="text-align:center;"><b>Sold</b></label></td>
 			</tr>
 			<tr ng-show='enquiry.enquiry_id == selectedEnquiry' ng-repeat="bid in bids | filter:{on_enquiry_id:enquiry.enquiry_id}">
 				<td></td>
-				<td><em>Bid amount: {{bid.bid_amount}}</em></td>
-				<td><em>Location: Nowhere</em></td>
-				<td>{{sale.StocksSold}}</td>
-				<td>{{sale.BarrelsSold}}</td>
+				<td><em>Bid amount: {{(bid.bid_amount)*1.05}}</em></td>
+				<!--<td><em>Location: {{enquiry.accepted_bid_id}}</em></td> -->
+				<!--<td><em>Accept bid: </em><input type="checkbox"></td>-->
+				<td><form>
+					<input type="hidden" ng-model="bidForm.user_id" ng-init="bidForm.user_id = getUserID()" />
+					<input type="hidden" ng-model="bidForm.enquiry_id" ng-init="bidForm.enquiry_id = enquiry.enquiry_id" />
+					<input type="hidden" ng-model="bidForm.accepted_bid_id" ng-init="bidForm.accepted_bid_id = bid.bid_id" />
+					<button type="submit" class="" ng-click="acceptBid(bidForm)">Accept bid</button></form>
+				</td>
 			</tr>	
 	
 		</tbody>
