@@ -1,4 +1,4 @@
-var carApp = angular.module('carApp', ['ngRoute']);
+var carApp = angular.module('carApp', ['ngRoute','ngAnimate', 'mgcrea.ngStrap']);
 
 carApp.config(function($routeProvider) {
 	$routeProvider

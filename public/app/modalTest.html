@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="mgcrea.ngStrapDocs">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/css/angular-motion.min.css">
+    <link rel="stylesheet" href="/lib/css/bootstrap-additions.min.css">
+    <link rel="stylesheet" href="/lib/css/libraries.min.css">
+    <link rel="stylesheet" href="/lib/css/main.min.css">
+    <script src="//code.angularjs.org/1.2.16/angular.js" data-semver="1.2.16"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
+<script src="//rawgithub.com/mgcrea/angular-strap/master/dist/angular-strap.js"></script>
+<script src="//rawgithub.com/mgcrea/angular-strap/master/dist/angular-strap.tpl.js"></script>
+
+    <script src="app.js"></script>
+    <script src="/lib/js/docs.tpl.min.js" data-semver="v2.0.0"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+
+<div class="bs-docs-section" ng-controller="ModalDemoCtrl">
+
+    <!-- Button to trigger a default modal with a scope as an object {title:'', content:'', etc.} -->
+    <button type="button" class="btn btn-lg btn-primary" data-animation="am-fade-and-scale" data-placement="center" bs-modal="modal">Click to toggle modal
+      <br />
+      <small>(using an object)</small>
+    </button>
+
+    <!-- You can use a custom html template with the `data-template` attr -->
+    <button type="button" class="btn btn-lg btn-danger" data-animation="am-fade-and-slide-top" data-template="/app/views/bid.html" bs-modal="modal">Custom Modal
+      <br />
+      <small>(using data-template)</small>
+    </button>
+
+  </div>
+
+  </body>
+
+</html>

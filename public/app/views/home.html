@@ -27,7 +27,7 @@
 
 		</div>
 	<div class="large-10 columns">
-		<table ng-hide="placeBid">
+		<table>
 			<thead>
 				<tr>
 					<td>Brand</td>
@@ -47,39 +47,10 @@
 					<td>{{getAgeFromYear(enquiry.from_year)}} Years Old</td>
 					<td>{{enquiry.milage}}</td>
 					<td>{{enquiry.target_price}}</td>
-					<td><button class="" ng-click="showPlaceBid(enquiries[id])">Place Bid</button></td>
+					<td><button class=""  data-animation="am-fade-and-scale" data-placement="center" data-template="/app/views/bid.html" bs-modal="placeBidModal">Place Bid</button></td>
 				</tr>		
 			</tbody>
 		</table>
-		<div ng-show="placeBid">
-			<h2>Place Bid</h2>
-			<table>
-				<thead>
-					<tr>
-						<td>Brand</td>
-						<td>Model</td>
-						<td>Colour</td>
-						<td>Age</td>
-						<td>Milage</td>
-						<td>Asking Price</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>{{bidEnquiry.brand_name}}</td>
-						<td>{{bidEnquiry.model_name}}</td>
-						<td>{{bidEnquiry.color}}</td>
-						<td>{{getAgeFromYear(bidEnquiry.from_year)}} Years Old</td>
-						<td>{{bidEnquiry.milage}}</td>
-						<td>{{bidEnquiry.target_price}}</td>
-					</tr>
-				</tbody>
-			</table>
-			<form>
-				<input placeholder="Bid amount" type="text" class="form-control" ng-model="form.bid_amount"><br />
-				<button ng-click="placeBid(form)"> Confirm Bid </button> <button ng-click="hidePlaceBid()"> Cancel Bid </button>
-			</form>
-		</div>
 	</div>	
 	<div class="large-2">
 		<label>Car</label>
