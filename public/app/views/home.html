@@ -76,17 +76,10 @@
 				</tbody>
 			</table>
 			<form>
-				<input placeholder="Bid amount" type="text" class="form-control" ng-model="form.bid_amount"><br />
-				<button ng-click="placeBid(form)"> Confirm Bid </button> <button ng-click="hidePlaceBid()"> Cancel Bid </button>
+				<input placeholder="Bid amount" type="text" class="form-control" ng-model="bidForm.bid_amount" /><br />
+				<button ng-click="doPlaceBid(bidForm, bidEnquiry.enquiry_id)"> Confirm Bid </button>
+				<button ng-click="hidePlaceBid()"> Cancel Bid </button>
 			</form>
 		</div>
-	</div>	
-	<div class="large-2">
-		<label>Car</label>
-		<select>
-			<option>My first car</option>
-			<option>Shitty car noone wants to buy</option>
-			<option>Stolen car</option>
-		</select>
 	</div>
 </div>
