@@ -42,16 +42,16 @@
 						<td>{{enquiry.color}}</td>
 						<td>{{getAgeFromYear(enquiry.from_year)}} Years Old</td>
 						<td>{{enquiry.milage}}</td>
-						<td>{{enquiry.target_price}}</td>
+						<td>¥{{enquiry.target_price}}</td>
 						<td>
 							Number of bids: {{numberOfBids(enquiry.enquiry_id)}}<br />
-							Lowest bid: {{lowestBid(enquiry.enquiry_id)}}
+							Lowest bid: ¥{{lowestBid(enquiry.enquiry_id)}}
 						</td>
 						<td ng-show="user.isLogged"><button class="" ng-click="showPlaceBid(enquiry)">Place Bid</button></td>
 					</tr>		
 				</tbody>
 			</table>
-			<div ng-show="placeBid">
+			<div ng-show="placeBid" class="medium-9 large-8 columns">
 				<h2>Place Bid</h2>
 				<table>
 					<thead>
@@ -72,10 +72,10 @@
 							<td>{{bidEnquiry.color}}</td>
 							<td>{{getAgeFromYear(bidEnquiry.from_year)}} Years Old</td>
 							<td>{{bidEnquiry.milage}}</td>
-							<td>{{bidEnquiry.target_price}}</td>
+							<td>¥{{bidEnquiry.target_price}}</td>
 							<td>
 								Number of bids: {{numberOfBids(bidEnquiry.enquiry_id)}}<br />
-								Lowest bid: {{lowestBid(bidEnquiry.enquiry_id)}}
+								Lowest bid: ¥{{lowestBid(bidEnquiry.enquiry_id)}}
 							</td>
 						</tr>
 					</tbody>

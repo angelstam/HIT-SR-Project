@@ -1,5 +1,5 @@
 <div class="medium-3 large-3 columns">
-	<h2>Add new enquiry</h2>
+	<h3>Add new enquiry</h3>
 	<form>
 		<div class="form-group">
 			<label>Brand</label>
@@ -52,7 +52,6 @@
 				<!--<td>Remove</td> -->
 				<td>Number of bids</td>
 				<td></td>
-				<td></td>
 			</tr>	
 		</thead>
 		<tbody>
@@ -63,24 +62,22 @@
 				<td>{{enquiry.color}}</td>
 				<td>{{getAgeFromYear(enquiry.from_year)}} Years Old</td>
 				<td>{{enquiry.milage}}</td>
-				<td>{{enquiry.target_price}}</td>
+				<td>¥{{enquiry.target_price}}</td>
 				<!--<td><a href="view-bids.html">New!</a></td>
 				<td><a href="view-bids.html">$6000</a></td> -->
 				<!--<td><input type="checkbox"></td> -->
 				<td>{{numberOfBids(enquiry.enquiry_id)}}</td>
-				<td><input type="hidden" ng-model="from.on_enquiry_id">
-				<button ng-hide="enquiry.accepted_bid_id" class="" ng-click="showBidsForEnquiry(enquiry.enquiry_id)">View Bids</button>
-
-				<!-- *** ADD LINK TO PRESENTATION -->
-				<button ng-show="enquiry.accepted_bid_id" class="" ng-click="">Pay</button>
-				</td>
-				<td><label ng-show="enquiry.accepted_bid_id">
+				<td>
+					<label ng-show="enquiry.accepted_bid_id">
 					<b ng-repeat="bid in bids | filter:{bid_id:enquiry.accepted_bid_id}:true">Pay {{roundUpAmount(((bid.bid_amount)*1.05)*0.10)}} ¥ (10 %) to secure the deal.</b></label>
 					<label ng-show="enquiry.accepted_bid_id">
 					<b ng-repeat="bid in bids | filter:{bid_id:enquiry.accepted_bid_id}:true">Total amount: {{roundUpAmount((bid.bid_amount)*1.05)}} ¥</b></label>
 					<label ng-show="enquiry.accepted_bid_id">
 					<b ng-repeat="bid in bids | filter:{bid_id:enquiry.accepted_bid_id}:true">Service fee: {{roundUpAmount((bid.bid_amount)*0.05)}} ¥ (5 %)</b></label>
-
+					<input type="hidden" ng-model="from.on_enquiry_id">
+					<button ng-hide="enquiry.accepted_bid_id" class="right" ng-click="showBidsForEnquiry(enquiry.enquiry_id)">View Bids</button>
+					<!-- *** ADD LINK TO PRESENTATION -->
+					<div class="right"><a class="button" ng-show="enquiry.accepted_bid_id" href="/slideshow">Pay</a></div>
 				</td>
 			</tr>
 			<tr ng-repeat-end ng-show='enquiry.enquiry_id == selectedEnquiry' ng-repeat="bid in bids | filter:{on_enquiry_id:enquiry.enquiry_id}:true | orderBy:'bid_amount'">
