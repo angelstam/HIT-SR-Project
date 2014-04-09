@@ -52,6 +52,7 @@
 				<!--<td>Remove</td> -->
 				<td>Number of bids</td>
 				<td></td>
+				<td></td>
 			</tr>	
 		</thead>
 		<tbody>
@@ -69,11 +70,22 @@
 				<td>{{numberOfBids(enquiry.enquiry_id)}}</td>
 				<td><input type="hidden" ng-model="from.on_enquiry_id">
 				<button ng-hide="enquiry.accepted_bid_id" class="" ng-click="showBidsForEnquiry(enquiry.enquiry_id)">View Bids</button>
-				<label ng-show="enquiry.accepted_bid_id" style="text-align:center;"><b>Ended</b></label></td>
+
+				<!-- *** ADD LINK TO PRESENTATION -->
+				<button ng-show="enquiry.accepted_bid_id" class="" ng-click="">Pay</button>
+				</td>
+				<td><label ng-show="enquiry.accepted_bid_id">
+					<b ng-repeat="bid in bids | filter:{bid_id:enquiry.accepted_bid_id}:true">Pay {{roundUpAmount(((bid.bid_amount)*1.05)*0.10)}} ¥ (10 %) to secure the deal.</b></label>
+					<label ng-show="enquiry.accepted_bid_id">
+					<b ng-repeat="bid in bids | filter:{bid_id:enquiry.accepted_bid_id}:true">Total amount: {{roundUpAmount((bid.bid_amount)*1.05)}} ¥</b></label>
+					<label ng-show="enquiry.accepted_bid_id">
+					<b ng-repeat="bid in bids | filter:{bid_id:enquiry.accepted_bid_id}:true">Service fee: {{roundUpAmount((bid.bid_amount)*0.05)}} ¥ (5 %)</b></label>
+
+				</td>
 			</tr>
 			<tr ng-repeat-end ng-show='enquiry.enquiry_id == selectedEnquiry' ng-repeat="bid in bids | filter:{on_enquiry_id:enquiry.enquiry_id}:true | orderBy:'bid_amount'">
 				<td></td>
-				<td><em> Bid amount: {{(bid.bid_amount)*1.05}}</em></td>
+				<td><em> Bid amount: <b>{{(bid.bid_amount)*1.05}} ¥</b> (Price includes {{(bid.bid_amount)*0.05}} ¥ in service fee)</em></td>
 				<!--<td><em>Location: {{enquiry.accepted_bid_id}}</em></td> -->
 				<!--<td><em>Accept bid: </em><input type="checkbox"></td>-->
 				<td>
@@ -83,7 +95,5 @@
 	
 		</tbody>
 	</table>
- {{cars}}
-	<button type="submit" class="" ng-click="parseToNumeric('bids', ['bid_amount'])">Test</button>
 </div>	
 </div>	

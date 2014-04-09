@@ -163,6 +163,14 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 		return parsedValue;
 
 	};
+
+	$scope.roundUpAmount = function(amount) {
+		console.log("Amount "+amount);
+
+		var roundedUpAmount = amount.toFixed(2); 
+
+		return roundedUpAmount;
+	};
 	
 	//Variable for keeping track of which view bid button was pressed
 	$scope.selectedEnquiry = 0;
