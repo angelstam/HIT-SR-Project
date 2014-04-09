@@ -40,6 +40,7 @@
 					<li ng-show="user.isLogged" class="divider"></li>
 				</ul>
 				<ul class="right">
+					<li ng-show="user.isLogged"><a>Hello {{user.username}}!</a></li>
 					<li class="divider"></li>
 					<li>
 						<a ng-show="user.isLogged" ng-click="doLogout()">Log Out</a>
