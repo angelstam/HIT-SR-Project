@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/lib/css/bootstrap-additions.min.css">
     <link rel="stylesheet" href="/lib/css/libraries.min.css">
     <link rel="stylesheet" href="/lib/css/main.min.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/lib/css/foundation.min.css">
     <script src="//code.angularjs.org/1.2.16/angular.js" data-semver="1.2.16"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
@@ -37,6 +39,32 @@
       <br />
       <small>(using data-template)</small>
     </button>
+
+
+      <table>
+      <thead>
+        <tr>
+          <td>Brand</td>
+          <td>Model</td>
+          <td>Colour</td>
+          <td>Age</td>
+          <td>Milage</td>
+          <td>Asking Price</td>
+          <td></td>
+        </tr> 
+      </thead>
+      <tbody>
+        <tr ng-repeat="(id, enquiry) in enquiries | filter: search">
+          <td>{{enquiry.brand_name}}</td>
+          <td>{{enquiry.model_name}}</td>
+          <td>{{enquiry.color}}</td>
+          <td>{{getAgeFromYear(enquiry.from_year)}} Years Old</td>
+          <td>{{enquiry.milage}}</td>
+          <td>{{enquiry.target_price}}</td>
+          <td><button ng-click="showPlaceBid(enquiry)" data-animation="am-fade-and-scale" data-placement="center" data-template="/app/views/bid.html" bs-modal="modal">Place Bid</button></td>
+        </tr>   
+      </tbody>
+    </table>
 
   </div>
 
