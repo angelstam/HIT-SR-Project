@@ -1,5 +1,13 @@
-carApp.controller('SignUpCtrl', function($scope) {
+carApp.controller('SignUpCtrl', function($scope, $http, $location) {
 
-	// create a message to display in our view
-	$scope.message = 'Everyone come and see how good I look!';
+	$scope.doSignUp = function(formData) {
+		$http.post('/json/signUp',formData)
+			.success(function(data) {
+				console.log(data);
+				$location.url('/login');
+		})
+			.error(function(data) {
+			console.log(data);
+		});
+	};
 });

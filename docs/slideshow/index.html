@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Reverse Car Bay | Reverse Ebay for Cars</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -30,6 +30,12 @@
 				document.getElementsByTagName( 'head' )[0].appendChild( link );
 			}
 		</script>
+		<style type="text/css">
+		.unstyle {
+			border: 0px;
+		}
+
+		</style>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -44,11 +50,31 @@
 			<div class="slides">
 				<section>
 					<h1>Reverse Car Bay</h1>
-					<h3>...Like Ebay</h3>
-					<h4>...But for cars</h4>
-					<h5>...In Reverse</h5>
+					<h3 class="fragment">...Like Ebay</h3>
+					<h4 class="fragment">...But for cars</h4>
+					<h5 class="fragment">...In Reverse</h5>
 				</section>
 				<section>
+					<section>
+						<h1>Requirements <br />Analysis</h1>
+					</section>
+					<section data-background="../useCaseDiagram.svg">
+					</section>
+					<section>
+						<h1>Constraints <br /> &amp; Limitations</h1>
+					</section>
+					<section>
+						<h1>Time</h1>
+					</section>
+					<section>
+						<h2>Team Skills</h2>
+						<ul>
+						    <li>HTML &amp; CSS</li>
+						    <li>Javascript</li>
+						    <li>PHP</li>
+						    <li>MySql</li>
+						</ul>
+					</section>
 					<section>
 						<h1>Frameworks</h1>
 					</section>
@@ -62,19 +88,114 @@
 					</section>
 				</section>
 				<section>
+
 					<section>
-						<h1>RESTful API</h1>
+						<h1>Design</h1>
 					</section>
 					<section>
-						<h2>
-							
-						</h2>
+						<h1>Application </br> Architecture</h2>
 					</section>
-					<section data-markdown>
-					    <script type="text/template">
-					        `GET /enquiries`
-								Returns a list of all enquiries.
-					    </script>
+					<section data-background="../architecture.svg">
+					</section>
+					<section data-background="../model.svg">
+					</section>
+					<section data-background="../view.svg">
+					</section>
+					<section data-background="../controller.svg">
+					</section>
+					<section>
+						<h2>Server Side Class Diagram</h2>
+						<img src="../PhpClassDiagram.png" alt="">
+					</section>
+					<section>
+						<h2>Client Side Class Diagram</h2>
+						<img src="../JavascriptClassDiagram.png" alt="">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Implementation</h1>
+					</section>
+					<section>
+						<h2>Implementation Reuse</h2>
+						<img src="../Recycling_symbol.svg" alt="" class="unstyle">
+					</section>
+					<section>
+						<h2>Procedure Reuse</h2>
+						<h4>Cool Stuff in Angular</h4>
+						<img src="../AngularJS_logo.svg" alt="">
+					</section>
+					<section>
+						<h2>ng-repeat</h2>
+						<pre>
+						<code class="javascript" contenteditable="" style="font-size: 18px; margin-top: 20px;" data-trim="">
+<table>
+	<tbody>
+			<tr ng-repeat="enquiry in enquiries | filter: search">
+				<td>{{enquiry.brand_name}}</td>
+				<td>{{enquiry.model_name}}</td>
+				<td>{{enquiry.color}}</td>
+				<td>{{getAgeFromYear(enquiry.from_year)}} Years Old</td>
+				<td>{{enquiry.milage}}</td>
+				<td>{{enquiry.target_price}}</td>
+				<td><button class="" ng-click="showPlaceBid(enquiry)">Place Bid</button></td>
+			</tr>
+	</tbody>	
+</table>
+
+
+						</code>
+						</pre>
+					</section>
+					<section>
+						<h2>ng-view</h2>
+						<pre>
+						<code class="javascript" contenteditable="" style="font-size: 18px; margin-top: 20px;" data-trim="">
+<div ng-view=""></div>
+						</code>
+						</pre>
+					</section>
+					<section>
+						<h2>$routeProvider</h2>
+						<pre>
+						<code class="javascript" contenteditable="" style="font-size: 18px; margin-top: 20px;" data-trim="">
+carApp.config(function($routeProvider) {
+	$routeProvider
+	.when('/home', {
+		templateUrl: 'views/home.html',
+		controller: 'HomeCtrl'
+	})
+	.when('/enquiry', {
+		templateUrl: 'views/enquiry.html',
+		controller: 'EnquiryCtrl'
+	})
+	.when('/login', {
+		templateUrl: 'views/login.html',
+		controller: 'LoginCtrl'
+	})
+	.when('/sign-up', {
+		templateUrl: 'views/sign-up.html',
+		controller: 'SignUpCtrl'
+	})
+	.when('/view-bids', {
+		templateUrl: 'views/view-bids.html',
+		controller: 'ViewBidsCtrl'
+	})
+	.otherwise({
+			redirectTo:'/home'
+	});
+});
+						</code>
+						</pre>
+					</section>
+					<section>
+						<h2>Opporunities for Reuse</h2>
+						<h3>Our RESTful API</h3>
+
+					</section>
+					<section>
+						<h2>GET /enquiries</h2>
+						<p>Returns a list of all enquiries.</p>
 					</section>
 					<section>
 						<h2>POST /enquiries</h2>
@@ -89,6 +210,12 @@
 }
 						</code>
 						</pre>
+					</section>
+					<section>
+						<h1>Verification</h1>
+					</section>
+					<section>
+						<h1>Maintenance</h1>
 					</section>
 				</section>
 				<section>

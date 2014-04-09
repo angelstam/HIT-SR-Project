@@ -32,7 +32,8 @@ class RestRouteEnquiries extends RestRoute
 
 		$result = $db->query("
 			SELECT
-				*
+				*,
+				IF(ISNULL(accepted_bid_id), 'running', 'ended') AS enquiry_status
 			FROM
 				enquiries
 				LEFT JOIN cars ON enquiries.car_id = cars.car_id

@@ -10,15 +10,15 @@ TODO Backlog
   - acceptBid
   - signUp
   - cars
-
-## Top priority
 * Login page
 * Remain logged in when refreshing page
-* Registration page
-* Main page (Profile page)
-  - Remove my enquiries from the list
 * Database
 * Create/config enquiries (Fixed options: brand, model, color, milage, from_year)
+* Registration page
+
+## Top priority
+* Main page (Profile page)
+  - Remove my enquiries from the list
 * Bid on enquiries
 
 ## Later

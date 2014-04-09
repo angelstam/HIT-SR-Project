@@ -13,4 +13,19 @@
       opacity: 0;
     }
   }
+
+.highlight
+{
+	box-shadow:10px 10px 10px #8f8;
+	background-color: red;
+}
+
+input.ng-dirty.ng-valid,select.ng-dirty.ng-valid
+{
+	border-color: Green;
+}
+
+input.ng-dirty.ng-invalid,select.ng-dirty.ng-invalid
+{
+	border-color: Red;
 }
