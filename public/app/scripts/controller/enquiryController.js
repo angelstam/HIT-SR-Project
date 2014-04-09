@@ -7,6 +7,10 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 			return $scope.userID;
 	}
 
+	$scope.getAgeFromYear = function($year) {
+		return (new Date()).getFullYear() - parseInt($year);
+	};
+
 	//Fetch cars from database
 	$scope.getCars = function() {
 		
