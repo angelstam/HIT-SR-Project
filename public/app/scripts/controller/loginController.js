@@ -38,6 +38,10 @@ carApp.controller('LoginCtrl', function($scope, UserService) {
 
 carApp.controller('LoginCtrl', function($scope, $http, $location, UserService){
 	$scope.formData = UserService;
+	$scope.LoginFail = false;
+	$scope.hideWarn =function() {
+		$scope.LoginFail = false;
+	};
 
 	$scope.doLogin = function(formData) {
 		$http.post('/json/login',formData)
@@ -53,12 +57,14 @@ carApp.controller('LoginCtrl', function($scope, $http, $location, UserService){
 				console.log(data);
 				UserService.isLogged = false;
 				UserService.username = '';
+				$scope.LoginFail = true;
 			}
 		})
 			.error(function(data) {
 			console.log(data);
 			UserService.isLogged = false;
 			UserService.username = '';
+			$scope.LoginFail = true;
 		});
 	};
 });

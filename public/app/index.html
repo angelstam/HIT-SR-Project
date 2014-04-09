@@ -12,6 +12,18 @@
 			visibility: hidden;
 
 		}
+
+		@font-face {
+			font-family: 'Player2Start';
+			src: url('./styles/PressStart2P-Regular.ttf');
+		}
+
+		h1 { font-family: 'Player2Start', Arial, sans-serif;
+			text-align: center;
+			font-size: 4em;
+			color: #333;
+		}
+
 	</style>
 
 </head>
@@ -31,8 +43,8 @@
 				<ul class="right">
 					<li class="divider"></li>
 					<li>
-						<a ng-show="user.isLogged" ng-click="doLogout()">Log Out</a>
-						<a ng-hide="user.isLogged" href="#/login">Log In</a></li>
+						<a ng-show="user.isLogged" ng-click="doLogout()">Log Out <img class="large-3 column" src="img/luigihead.svg" alt=""></a>
+						<a ng-hide="user.isLogged" href="#/login">Log In <img class="large-3 column" src="img/mariohead.svg" alt=""></a></li>
 					<li class="divider"></li>
 				</ul>
 			</section>
