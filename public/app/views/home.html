@@ -46,7 +46,7 @@
 						Number of bids: {{numberOfBids(enquiry.enquiry_id)}}<br />
 						Lowest bid: {{lowestBid(enquiry.enquiry_id)}}
 					</td>
-					<td ng-show="user.isLogged"><button class=""  data-animation="am-fade-and-scale" data-placement="center" data-template="/app/views/bid.html" bs-modal="placeBidModal" ng-click="showPlaceBid(enquiry)">Place Bid</button></td>
+					<td ng-show="user.isLogged"><button ng-click="showPlaceBid(enquiry)" data-animation="am-fade-and-scale" data-placement="center" bs-modal="model" data-template="/app/views/bid.html">Place Bid</button></td>
 				</tr>		
 			</tbody>
 		</table>

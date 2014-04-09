@@ -1,7 +1,7 @@
 carApp.controller('HomeCtrl', function($scope, $http, UserService, $modal) {
 
 	// Pre-fetch an external template populated with a custom scope
-	var placeBidModal = $modal({title: 'Place Bid', template: 'views/bid.html'});
+	$scope.modal = $modal({title: 'Place Bid', template: 'views/bid.html'});
 	$scope.enquiries = [];
 	$scope.placeBid = false;
 	$scope.bidPlacedOn = null;
@@ -27,14 +27,14 @@ carApp.controller('HomeCtrl', function($scope, $http, UserService, $modal) {
 		});
 	};
 
-	/*$scope.showPlaceBid = function(enquiry) {
+	$scope.showPlaceBid = function(enquiry) {
 		// Show when some event occurs (use $promise property to ensure the template has been loaded)
-		placeBidModal.$promise.then(function() {
+		/*$scplaceBidModal.$promise.then(function() {
 			placeBidModal.show();
-		});
+		});*/
 		$scope.bidEnquiry = enquiry;
 		//$scope.placeBid = true;
-	};*/
+	};
 
 	$scope.hidePlaceBid = function() {
 		$scope.bidEnquiry = [];

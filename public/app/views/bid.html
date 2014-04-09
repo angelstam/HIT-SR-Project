@@ -5,6 +5,7 @@
         <button type="button" class="close" ng-click="$hide()">&times;</button>
         <h4 class="modal-title" ng-bind-html="title"></h4>
       </div>
+		<form name="bidForm" novalidate ng-submit="bidForm.$valid && !bidForm.$pristine && doPlaceBid(bidForm, bidEnquiry.enquiry_id)">
       <div class="modal-body large-10 columns" ng-show="content">
 		<table>
 			<thead>
@@ -15,6 +16,7 @@
 					<td>Age</td>
 					<td>Milage</td>
 					<td>Asking Price</td>
+					<td>Bids</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,15 +27,22 @@
 					<td>{{getAgeFromYear(bidEnquiry.from_year)}} Years Old</td>
 					<td>{{bidEnquiry.milage}}</td>
 					<td>{{bidEnquiry.target_price}}</td>
+					<td>
+						Number of bids: {{numberOfBids(bidEnquiry.enquiry_id)}}<br />
+						Lowest bid: {{lowestBid(bidEnquiry.enquiry_id)}}
+					</td>
 				</tr>
 			</tbody>
 		</table>
-		<input placeholder="Bid amount" type="text" class="form-control" ng-model="form.bid_amount">
+
       </div>
       <div class="modal-footer">
-        <button ng-click="placeBid(form)"> Confirm Bid </button>
-        <button ng-click="hidePlaceBid()"> Cancel Bid </button>
+			<div ng-show="!bidForm.$pristine && !bidForm.$valid"> Invalid bid amount! </div>
+			<input placeholder="Bid amount" type="number" min="0" required max="{{lowestBid(bidEnquiry.enquiry_id)}}" class="form-control" ng-model="bidForm.bid_amount" /><br />
+			<button type="submit"> Confirm Bid </button>
+			<button ng-click="hidePlaceBid()"> Return </button>
       </div>
+		</form>
     </div>
   </div>
 </div>
