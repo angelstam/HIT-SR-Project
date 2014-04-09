@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS `reversecarbay`.`enquiries` (
   `milage` INT UNSIGNED NULL,
   `from_year` YEAR NULL,
   `accepted_bid_id` INT UNSIGNED NULL,
+  `enquiry_timestamp` TIMESTAMP NOT NULL,
   PRIMARY KEY (`enquiry_id`, `car_id`, `user_id`),
   INDEX `fk_enquiry_cars_idx` (`car_id` ASC),
   INDEX `fk_enquiry_users_idx` (`user_id` ASC),
