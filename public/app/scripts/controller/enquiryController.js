@@ -1,7 +1,6 @@
 carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 
 	$scope.userID = UserService.id;
-	$scope.bidForm = {};
 
 	// Get the user id from UserService
 	$scope.getUserID = function(){
