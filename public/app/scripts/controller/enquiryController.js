@@ -61,6 +61,8 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 			success(function (data, status, headers, config) {
 			$scope.bids=data;
 
+			$scope.parseToNumeric('bids','bid_amount');
+
 			}).
 			error(function (data, status, headers, config) {
 
@@ -140,6 +142,27 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 
 
 	}
+
+	// Parse field specified in scope array to numeric values
+	$scope.parseToNumeric = function(scopeArray, field) {
+
+				$scope[scopeArray].forEach(function(entry) {
+					var parsedValue = Number(entry[field]);
+					entry[field] = parsedValue;
+				
+			});
+	
+	};
+
+	$scope.parseToNumber = function(stringToParse) {
+
+		var parsedValue = Number(stringToParse);
+		console.log(stringToParse);
+		console.log(typeof parsedValue);
+
+		return parsedValue;
+
+	};
 	
 	//Variable for keeping track of which view bid button was pressed
 	$scope.selectedEnquiry = 0;
