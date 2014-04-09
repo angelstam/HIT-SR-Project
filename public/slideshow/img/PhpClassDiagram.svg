@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="570px" height="595.28px" viewBox="0 0 570 595.28" enable-background="new 0 0 570 595.28" xml:space="preserve">
+<rect x="145.849" y="469.264" fill="#00AEEF" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="95.469" height="105.64"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="145.849" y1="488.62" x2="241.319" y2="488.62"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="145.849" y1="494.197" x2="241.319" y2="494.197"/>
+<rect x="392.069" y="12.162" fill="#27AAE1" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="114.606" height="105.64"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="392.069" y1="31.519" x2="506.675" y2="31.519"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="391.37" y1="63.4" x2="506.675" y2="63.4"/>
+<rect x="416.986" y="185.262" fill="#BE1E2D" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="126.553" height="105.64"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="416.986" y1="204.618" x2="543.538" y2="204.618"/>
+<polygon fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="212.484,73.491 200.163,91.907 
+	212.311,91.907 224.459,91.907 "/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="170.707" y1="307.866" x2="274.854" y2="307.866"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="170.707" y1="314.258" x2="274.854" y2="314.258"/>
+<rect x="314.011" y="297.994" fill="#E6E7E8" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="94.134" height="75.102"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="314.904" y1="314.258" x2="409.039" y2="314.258"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="313.108" y1="320.568" x2="409.039" y2="320.568"/>
+<rect x="314.011" y="149.317" fill="#E6E7E8" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="80.219" height="88.765"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="314.904" y1="165.582" x2="395.123" y2="165.582"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="314.904" y1="172.058" x2="395.123" y2="172.058"/>
+<rect x="11.945" y="288.811" fill="#E6E7E8" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="111.119" height="78.267"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="12.838" y1="305.075" x2="121.569" y2="305.075"/>
+<polyline fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="212.311,91.907 212.311,120.9 
+	358.006,120.9 358.006,149.317 "/>
+<polyline fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="285.158,120.612 285.158,271.365 
+	359.873,271.365 359.873,297.994 "/>
+<line fill="none" x1="12.838" y1="310.942" x2="110.922" y2="310.942"/>
+<polyline fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="212.311,151.552 212.311,120.9 
+	54.143,120.9 54.143,149.317 "/>
+<polyline fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="145.814,120.9 145.814,265.948 
+	212.311,265.948 212.311,291.602 "/>
+<polyline fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" points="145.814,265.948 52.947,265.948 
+	52.947,288.811 "/>
+<rect x="423.68" y="217.674" fill="none" width="114.606" height="68.763"/>
+<text transform="matrix(1 0 0 1 423.6795 224.7939)" font-family="'MyriadPro-Regular'" font-size="10.028">+ __construct($message)</text>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="194.318" y1="469.391" x2="194.318" y2="391.681"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="194.318" y1="469.391" x2="209.36" y2="454.349"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="194.318" y1="469.391" x2="179.276" y2="454.349"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="455.58" y1="185.993" x2="455.58" y2="117.111"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="455.58" y1="185.993" x2="470.622" y2="170.951"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="455.58" y1="185.993" x2="440.538" y2="170.951"/>
+<g>
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="248.595" y1="47.266" x2="392.434" y2="47.266"/>
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="248.595" y1="47.266" x2="263.749" y2="62.308"/>
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="248.595" y1="47.266" x2="263.749" y2="32.223"/>
+</g>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="416.986" y1="211.944" x2="543.538" y2="211.944"/>
+<rect x="171.492" y="290.088" fill="#E6E7E8" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="104.147" height="83.008"/>
+<rect x="175.788" y="294.393" fill="none" width="72.449" height="10.156"/>
+<text transform="matrix(1 0 0 1 175.7883 302.0848)" font-family="'MyriadPro-Regular'" font-size="10.8335">RestRouteLogin</text>
+<rect x="319.985" y="300.785" fill="none" width="79.776" height="10.156"/>
+<text transform="matrix(1 0 0 1 319.9844 308.4765)" font-family="'MyriadPro-Regular'" font-size="10.8335">RestRouteLogout</text>
+<rect x="319.985" y="154.666" fill="none" width="72.449" height="10.156"/>
+<text transform="matrix(1 0 0 1 319.9844 162.3575)" font-family="'MyriadPro-Regular'" font-size="10.8335">RestRouteCars</text>
+<rect x="17.919" y="291.602" fill="none" width="93.004" height="10.156"/>
+<text transform="matrix(1 0 0 1 17.918 299.2938)" font-family="'MyriadPro-Regular'" font-size="10.8335">RestRouteEnquiries</text>
+<rect x="395.889" y="15.408" fill="none" width="86.909" height="12.893"/>
+<text transform="matrix(1 0 0 1 395.8889 27.6144)" font-family="'MyriadPro-Regular'" font-size="17.1909">RestService</text>
+<rect x="419.297" y="187.188" fill="none" width="145.167" height="22.523"/>
+<text transform="matrix(1 0 0 1 419.2965 199.3934)" font-family="'MyriadPro-Regular'" font-size="17.1909">RestServiceError</text>
+<rect x="150.625" y="472.782" fill="none" width="84.522" height="15.839"/>
+<text transform="matrix(1 0 0 1 150.6241 484.9863)" font-family="'MyriadPro-Regular'" font-size="17.1909">SimpleAuth</text>
+<rect x="168.267" y="18.55" fill="#D7DF23" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="80.219" height="53.842"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="168.267" y1="34.815" x2="248.486" y2="34.815"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="168.267" y1="44.219" x2="248.486" y2="44.219"/>
+<rect x="172.153" y="20.906" fill="none" width="72.449" height="10.156"/>
+<text transform="matrix(1 0 0 1 172.1529 28.598)" font-family="'MyriadPro-Regular'" font-size="10.8335">RestRoute</text>
+<rect x="172.801" y="47.434" fill="none" width="71.151" height="38.163"/>
+<text transform="matrix(1 0 0 1 172.8014 54.553)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ get($p)</tspan><tspan x="0" y="12.034" font-family="'MyriadPro-Regular'" font-size="10.028">+put($p, $data)</tspan></text>
+<rect x="8.011" y="151.875" fill="#E6E7E8" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="104.672" height="88.765"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="8.904" y1="168.139" x2="113.576" y2="168.139"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="8.904" y1="174.616" x2="113.576" y2="174.616"/>
+<rect x="13.985" y="154.109" fill="none" width="93.004" height="16.852"/>
+<text transform="matrix(1 0 0 1 13.9841 161.8015)" font-family="'MyriadPro-Regular'" font-size="10.8335">RestRouteAcceptBid</text>
+<rect x="16.878" y="180.107" fill="none" width="91.685" height="55.632"/>
+<text transform="matrix(1 0 0 1 16.8776 187.2265)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ get($p)</tspan><tspan x="0" y="12.034" font-family="'MyriadPro-Regular'" font-size="10.028">+ put($p, $data)</tspan><tspan x="0" y="24.067" font-family="'MyriadPro-Regular'" font-size="10.028">- getBids()</tspan><tspan x="0" y="36.101" font-family="'MyriadPro-Regular'" font-size="10.028">- acceptBid($data)</tspan></text>
+<g>
+	
+		<rect x="165.88" y="154.666" fill="#E6E7E8" stroke="#000000" stroke-width="3" stroke-miterlimit="10" width="90.776" height="88.765"/>
+</g>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="166.773" y1="170.93" x2="257.55" y2="170.93"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="166.773" y1="178.675" x2="257.55" y2="178.675"/>
+<rect x="171.854" y="157.457" fill="none" width="72.449" height="10.156"/>
+<text transform="matrix(1 0 0 1 171.8543 165.1495)" font-family="'MyriadPro-Regular'" font-size="10.8335">RestRouteBids</text>
+<rect x="173.506" y="185.121" fill="none" width="80.702" height="52.528"/>
+<text transform="matrix(1 0 0 1 173.5065 192.2402)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ get($p)</tspan><tspan x="0" y="12.034" font-family="'MyriadPro-Regular'" font-size="10.028">+ put($p, $data)</tspan><tspan x="0" y="24.067" font-family="'MyriadPro-Regular'" font-size="10.028">- getBids()</tspan><tspan x="0" y="36.101" font-family="'MyriadPro-Regular'" font-size="10.028">- placeBid($data)</tspan></text>
+<rect x="323.084" y="182.734" fill="none" width="68.286" height="51.095"/>
+<text transform="matrix(1 0 0 1 323.085 189.8535)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ get($p)</tspan><tspan x="0" y="12.034" font-family="'MyriadPro-Regular'" font-size="10.028">- getCars()</tspan></text>
+<rect x="20.812" y="316.748" fill="none" width="96.699" height="56.348"/>
+<text transform="matrix(1 0 0 1 20.8116 323.8683)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ get($p)</tspan><tspan x="0" y="12.033" font-family="'MyriadPro-Regular'" font-size="10.028">+ put($p, $data)</tspan><tspan x="0" y="24.067" font-family="'MyriadPro-Regular'" font-size="10.028">- getEnquiries()</tspan><tspan x="0" y="36.101" font-family="'MyriadPro-Regular'" font-size="10.028">- createEnquiry($data)</tspan></text>
+<rect x="175.788" y="320.568" fill="none" width="91.904" height="66.19"/>
+<text transform="matrix(1 0 0 1 175.7891 327.6887)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ get($p)</tspan><tspan x="0" y="12.033" font-family="'MyriadPro-Regular'" font-size="10.028">+ put($p,  $data)</tspan><tspan x="0" y="24.067" font-family="'MyriadPro-Regular'" font-size="10.028">- getLoginStatus()</tspan><tspan x="0" y="36.101" font-family="'MyriadPro-Regular'" font-size="10.028">- doLogin($data)</tspan></text>
+<rect x="321.174" y="326.299" fill="none" width="76.404" height="55.87"/>
+<text transform="matrix(1 0 0 1 321.1748 333.4191)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ put($p, $data)</tspan><tspan x="0" y="12.033" font-family="'MyriadPro-Regular'" font-size="10.028">- doLogout($data)</tspan></text>
+<rect x="152.535" y="501.838" fill="none" width="83.567" height="67.808"/>
+<text transform="matrix(1 0 0 1 152.5344 508.9581)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ get($p)</tspan><tspan x="0" y="12.033" font-family="'MyriadPro-Regular'" font-size="10.028">+ put($p, $data)</tspan><tspan x="0" y="24.067" font-family="'MyriadPro-Regular'" font-size="10.028">- getBids()</tspan><tspan x="0" y="36.101" font-family="'MyriadPro-Regular'" font-size="10.028">- acceptBid($data)</tspan></text>
+<rect x="395.889" y="72.251" fill="none" width="119.381" height="38.679"/>
+<text transform="matrix(1 0 0 1 395.8888 79.3707)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.028">+ output($p)</tspan><tspan x="0" y="12.034" font-family="'MyriadPro-Regular'" font-size="10.028">+addRoute($route_name, </tspan><tspan x="0" y="24.067" font-family="'MyriadPro-Regular'" font-size="10.028">$route)</tspan></text>
+<rect x="398.754" y="40.256" fill="none" width="101.713" height="16.236"/>
+<text transform="matrix(1 0 0 1 398.7552 47.3758)" font-family="'MyriadPro-Regular'" font-size="10.028">- Array $routes</text>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="170.707" y1="307.866" x2="274.854" y2="307.866"/>
+<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="170.707" y1="314.258" x2="274.854" y2="314.258"/>
+</svg>
