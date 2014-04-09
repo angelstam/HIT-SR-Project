@@ -7,6 +7,7 @@ carApp.controller('HomeCtrl', function($scope, $http, UserService) {
 	$scope.placeBid = false;
 	$scope.bidPlacedOn = null;
 	//$scope.bidEnquiry = [];
+	$scope.user = UserService;
 
 	$scope.getAgeFromYear = function($year) {
 		return (new Date()).getFullYear() - parseInt($year);

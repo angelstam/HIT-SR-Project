@@ -31,11 +31,11 @@
 					<td>Milage</td>
 					<td>Asking Price</td>
 					<td>Number of bids</td>
-					<td></td>
+					<td ng-show="user.isLogged"></td>
 				</tr>	
 			</thead>
 			<tbody>
-				<tr ng-repeat="(id, enquiry) in enquiries | filter: search | orderBy:'-enquiry_id' | limitTo:10" ng-class="highlight:true=">
+				<tr ng-repeat="(id, enquiry) in enquiries | filter: search | orderBy:'-enquiry_id'" ng-class="highlight:true=">
 					<td>{{enquiry.brand_name}}</td>
 					<td>{{enquiry.model_name}}</td>
 					<td>{{enquiry.color}}</td>
@@ -46,7 +46,7 @@
 						Number of bids: {{numberOfBids(enquiry.enquiry_id)}}<br />
 						Lowest bid: {{lowestBid(enquiry.enquiry_id)}}
 					</td>
-					<td><button class="" ng-click="showPlaceBid(enquiry)">Place Bid</button></td>
+					<td ng-show="user.isLogged"><button class="" ng-click="showPlaceBid(enquiry)">Place Bid</button></td>
 				</tr>		
 			</tbody>
 		</table>
