@@ -1,47 +1,61 @@
-<div class="small-6 columns">
-	<h3><em>Your enquiry:</em></h3>
-	<h2>Ford</h2>
-	<h3>Mondeo</h3>
-	<p>Black</p>
-	<p>2 Years Old</p>
-	<p>25000 km</p>
-	<p>$5000</p>
+<div class="large-6 columns">
+	<h2>Your active bids</h2>
+	<table>
+	
+		<thead>
+			<tr>
+				<td>Brand</td>
+				<td>Model</td>
+				<td>Colour</td>
+				<td>Age</td>
+				<td>Milage</td>
+				<td>Your bid</td>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr ng-repeat-start="bid in bids | filter:{'user_id':getUserID()}:true">
+			</tr>
+
+			<tr ng-repeat-end ng-repeat="enquiry in enquiries | filter:{'enquiry_id':bid.on_enquiry_id,'enquiry_status':'running'}:true">
+				<td>{{enquiry.enquiry_id}} {{enquiry.brand_name}}</td>
+				<td>{{enquiry.model_name}}</td>
+				<td>{{enquiry.color}}</td>
+				<td>{{enquiry.age}}</td>
+				<td>{{enquiry.milage}}</td>
+				<td>{{bid.bid_amount}}</td>
+			</tr>
+	
+		</tbody>
+	</table>
 </div>
-<div class="small-6 columns">
-	<h3><em>Your bids:</em></h3>
-	<div data-alert class="alert-box success radius">
-		<h2>Ford</h2>
-		<h3>Mondeo</h3>
-		<p>Black</p>
-		<p>2 Years Old</p>
-		<p>25000 km</p>
-		<p>$5000</p>
-		<button type="submit" class="">Accept Sale</button>
-		<br>
-	</div>
-	<h2>Ford</h2>
-	<h3>Mondeo</h3>
-	<p>Black</p>
-	<p>2 Years Old</p>
-	<p>25000 km</p>
-	<p>$5000</p>
-	<button type="submit" class="">Accept Bid</button>
-	<br>
-	<h2>Ford</h2>
-	<h3>Mondeo</h3>
-	<p>Black</p>
-	<p>2 Years Old</p>
-	<p>25000 km</p>
-	<p>$5000</p>
-	<button type="submit" class="">Accept Bid</button>
-	<br>
-	<h2>Ford</h2>
-	<h3>Mondeo</h3>
-	<p>Black</p>
-	<p>2 Years Old</p>
-	<p>25000 km</p>
-	<p>$5000</p>
-	<button type="submit" class="">Accept Bid</button>
-	<br>
-</div>	
-</div>	
+
+<div class="large-6 columns">
+	<h2>Your purchases</h2>
+	<table>
+	
+		<thead>
+			<tr>
+				<td>Brand</td>
+				<td>Model</td>
+				<td>Colour</td>
+				<td>Age</td>
+				<td>Milage</td>
+				<td>Amount</td>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr ng-repeat-start="bid in bids | filter:{'user_id':getUserID()}:true">
+			</tr>
+
+			<tr ng-repeat-end ng-repeat="enquiry in enquiries | filter:{'enquiry_id':bid.on_enquiry_id,'enquiry_status':'ended'}:true">
+				<td>{{enquiry.enquiry_id}} {{enquiry.brand_name}}</td>
+				<td>{{enquiry.model_name}}</td>
+				<td>{{enquiry.color}}</td>
+				<td>{{enquiry.age}}</td>
+				<td>{{enquiry.milage}}</td>
+				<td>{{bid.bid_amount}}</td>
+			</tr>
+	
+		</tbody>
+	</table>
+</div>			

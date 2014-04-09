@@ -20,7 +20,7 @@ carApp.config(function($routeProvider) {
 	})
 	.when('/view-bids', {
 		templateUrl: 'views/view-bids.html',
-		controller: 'ViewBidsCtrl'
+		controller: 'ViewBidCtrl'
 	})
 	.otherwise({
 			redirectTo:'/home'
