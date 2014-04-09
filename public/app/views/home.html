@@ -35,7 +35,7 @@
 				</tr>	
 			</thead>
 			<tbody>
-				<tr ng-repeat="(id, enquiry) in enquiries | filter: search | orderBy:'-enquiry_id'" ng-class="highlight:true=">
+				<tr ng-repeat="(id, enquiry) in enquiries | filter: search | orderBy:'-enquiry_id'| filter:{'user_id':getUserID()}:false" ng-class="highlight:true=">
 					<td>{{enquiry.brand_name}}</td>
 					<td>{{enquiry.model_name}}</td>
 					<td>{{enquiry.color}}</td>
@@ -79,9 +79,10 @@
 					</tr>
 				</tbody>
 			</table>
-			<form>
-				<input placeholder="Bid amount" type="number" max="{{lowestBid(bidEnquiry.enquiry_id)}}" class="form-control" ng-model="bidForm.bid_amount" /><br />
-				<button ng-click="doPlaceBid(bidForm, bidEnquiry.enquiry_id)"> Confirm Bid </button>
+			<form name="bidForm" novalidate ng-submit="bidForm.$valid && !bidForm.$pristine && doPlaceBid(bidForm, bidEnquiry.enquiry_id)">
+				<div ng-show="!bidForm.$pristine && !bidForm.$valid"> Invalid bid amount! </div>
+				<input placeholder="Bid amount" type="number" min="0" required max="{{lowestBid(bidEnquiry.enquiry_id)}}" class="form-control" ng-model="bidForm.bid_amount" /><br />
+				<button type="submit"> Confirm Bid </button>
 				<button ng-click="hidePlaceBid()"> Return </button>
 			</form>
 		</div>

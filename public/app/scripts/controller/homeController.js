@@ -1,8 +1,5 @@
 carApp.controller('HomeCtrl', function($scope, $http, UserService) {
 
-	// create a message to display in our view
-	$scope.message = 'Everyone come and see how good I look!';
-
 	$scope.enquiries = [];
 	$scope.placeBid = false;
 	$scope.bidPlacedOn = null;
@@ -17,7 +14,11 @@ carApp.controller('HomeCtrl', function($scope, $http, UserService) {
 
 		$http.get('/json/enquiries')
 			.success(function(data) {
-				$scope.enquiries = data;
+				data.forEach(function(entry) {
+					if (entry.user_id != UserService.id && entry.enquiry_status == 'running') {
+						$scope.enquiries.push(entry);
+					}
+				});
 		})
 			.error(function(data) {
 			console.log(data);
@@ -32,6 +33,8 @@ carApp.controller('HomeCtrl', function($scope, $http, UserService) {
 	$scope.hidePlaceBid = function() {
 		$scope.bidEnquiry = [];
 		$scope.placeBid = false;
+		$scope.bidForm.bid_amount = '';
+		$scope.bidForm.$setPristine();
 	};
 
 	$scope.doPlaceBid = function(data, on_enquiry_id) {
@@ -43,6 +46,7 @@ carApp.controller('HomeCtrl', function($scope, $http, UserService) {
 				// Reload bids from server.
 				$scope.loadBids();
 				$scope.bidPlacedOn = on_enquiry_id;
+				$scope.hidePlaceBid();
 		})
 			.error(function(data) {
 			console.log(data);
@@ -51,7 +55,7 @@ carApp.controller('HomeCtrl', function($scope, $http, UserService) {
 
 	$scope.loadBids = function() {
 
-		$http({method: 'GET', url: 'http://reversecarbay.local/json/bids'}).
+		$http({method: 'GET', url: '/json/bids'}).
 			success(function (data, status, headers, config) {
 			$scope.bids=data;
 
