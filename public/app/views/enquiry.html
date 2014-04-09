@@ -72,7 +72,7 @@
 				<button ng-hide="enquiry.accepted_bid_id" class="" ng-click="showBidsForEnquiry(enquiry.enquiry_id)">View Bids</button>
 
 				<!-- *** ADD LINK TO PRESENTATION -->
-				<button ng-show="enquiry.accepted_bid_id" class="" ng-click="">Pay</button>
+				<a class="button" ng-show="enquiry.accepted_bid_id" class="" href="/slideshow">Pay</a>
 				</td>
 				<td><label ng-show="enquiry.accepted_bid_id">
 					<b ng-repeat="bid in bids | filter:{bid_id:enquiry.accepted_bid_id}:true">Pay {{roundUpAmount(((bid.bid_amount)*1.05)*0.10)}} ¥ (10 %) to secure the deal.</b></label>

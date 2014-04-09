@@ -26,6 +26,21 @@ carApp.config(function($routeProvider) {
 			redirectTo:'/home'
 	});
 });
+carApp.directive( 'goClick', function ( $location ) {
+  return function ( scope, element, attrs ) {
+    var path;
+
+    attrs.$observe( 'goClick', function (val) {
+      path = val;
+    });
+
+    element.bind( 'click', function () {
+      scope.$apply( function () {
+        $location.path( path );
+      });
+    });
+  };
+});
 carApp.run(function($rootScope, $http, UserService) {
 	$rootScope.checkLoginStatus = function() {
 		$http.get('/json/login')
