@@ -121,20 +121,23 @@ carApp.controller('EnquiryCtrl', function($scope,$http,UserService) {
 
 	}
 
-	$scope.acceptBid = function(bidForm) {
+	$scope.acceptBid = function(bidID, enquiryID) {
 
-		console.log("eng "+bidForm.enquiry_id+" user "+bidForm.user_id+" bid "+bidForm.accepted_bid_id);
+		var acceptedBidInfo = {"user_id":$scope.userID,"enquiry_id":enquiryID,"accepted_bid_id":bidID}
 
-		$http({method: 'POST', url: 'http://reversecarbay.local/json/acceptBid', data: bidForm}).
+		//console.log("eng "+bidForm.enquiry_id+" user "+bidForm.user_id+" bid "+bidForm.accepted_bid_id);
+		console.log("form "+bidID+"en "+enquiryID);
+		$http({method: 'POST', url: 'http://reversecarbay.local/json/acceptBid', data: acceptedBidInfo}).
 		success(function (data, status, headers, config) {
 
 		// Update enquiries on page
 		$scope.getEnquiries();
+		$scope.selectedEnquiry = 0;
 
 		}).
 		error(function (data, status, headers, config) {
 			alert("The enquiry failed");
-		});
+		}); 
 
 
 	}
