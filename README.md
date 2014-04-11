@@ -67,3 +67,10 @@ Accept a bid.
 
 `GET /cars`
 Return list of cars.
+
+## Deployment
+Prerequisite software:
+* Apache 2.2 configured to publish `/public` in the repo. The server shall have the option MutiViews enabled.
+* PHP 5.3+ with MySQL support.
+* MySQL 5+.
+
