@@ -1,11 +1,13 @@
-HIT-SR-Project
+HIT-SR-Project (Reverse Car Bay)
 =========
 
-HiT - Software Reuse Technology Project
+##HiT - Software Reuse Technology Project
+This project was created as an exercise in the course *Software Reuse Technology* at *Harbin Institute of Technology* during ten days in April 2014.
 
 * [View slideshow](http://angelstam.github.io/HIT-SR-Project)
 
 ##Architecture
+This is an application created using AngularJS with a PHP-MySQL backend. The following figure show a representation of the systems architecture.
 ![System architecture diagram](/docs/architecture.png)
 
 ##Git
@@ -77,5 +79,5 @@ Return list of cars.
 Prerequisite software:
 * Apache 2.2 configured to publish `/public` in the repo. The server shall have the option MutiViews enabled.
 * PHP 5.3+ with MySQL support.
-* MySQL 5+.
+* MySQL 5+. Import /sql/reversecarbay.sql into your database server.
 
