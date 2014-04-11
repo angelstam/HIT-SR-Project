@@ -15,11 +15,11 @@ TODO Backlog
 * Database
 * Create/config enquiries (Fixed options: brand, model, color, milage, from_year)
 * Registration page
-
-## Top priority
 * Main page (Profile page)
   - Remove my enquiries from the list
 * Bid on enquiries
+
+## Top priority
 
 ## Later
 * Password-hashing
