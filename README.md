@@ -3,6 +3,8 @@ HIT-SR-Project
 
 HiT - Software Reuse Technology Project
 
+* [View slideshow](http://angelstam.github.io/HIT-SR-Project)
+
 ##Git
 ###Workflow
 We try to avoid merge commits.
