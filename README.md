@@ -5,6 +5,9 @@ HiT - Software Reuse Technology Project
 
 * [View slideshow](http://angelstam.github.io/HIT-SR-Project)
 
+##Architecture
+![System architecture diagram](/docs/architecture.png)
+
 ##Git
 ###Workflow
 We try to avoid merge commits.
