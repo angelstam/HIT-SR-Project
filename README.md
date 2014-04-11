@@ -6,7 +6,7 @@ This project was created as an exercise in the course *Software Reuse Technology
 
 * [View slideshow](http://angelstam.github.io/HIT-SR-Project)
 * [Our backlog](/TODO.md)
-* [Software Requirements Specification](blob/master/docs/Software%20Requirements%20Specification.pdf?raw=true)
+* [Software Requirements Specification](/docs/Software%20Requirements%20Specification.pdf?raw=true)
 
 ##Architecture
 This is an application created using AngularJS with a PHP-MySQL backend. The following figure show a representation of the systems architecture.
