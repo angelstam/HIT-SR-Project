@@ -1,8 +1,6 @@
-\#*#
-.#*
-*~
 .DS_Store
-Thumbs.db
-*.bak
-
-config.local.inc
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
