@@ -2,13 +2,26 @@ HIT-SR-Project (Reverse Car Bay)
 =========
 
 ##HiT - Software Reuse Technology Project
-This project was created as an exercise in the course *Software Reuse Technology* at *Harbin Institute of Technology* during ten days in April 2014.
+This project was created as an exercise in the course *Software Reuse Technology* at *Harbin Institute of Technology* during ten days in April 2014. The code that resulted from this project should be considered a prototype far from production ready.
 
 * [View slideshow](http://angelstam.github.io/HIT-SR-Project)
+* [Our backlog](/TODO.md)
+* [Software Requirements Specification](blob/master/docs/Software%20Requirements%20Specification.pdf?raw=true)
 
 ##Architecture
 This is an application created using AngularJS with a PHP-MySQL backend. The following figure show a representation of the systems architecture.
 ![System architecture diagram](/docs/architecture.png)
+
+###Directory structure
+`/docs` - Documentation related files.
+
+`/include` - PHP classes.
+
+`/public` - The files to be served by the web server.
+
+`/public/app` - The web application that runs in the users browser.
+
+`/public/json.php` - The json REST interface.
 
 ##Git
 ###Workflow
